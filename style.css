@@ -1,0 +1,18 @@
+body {
+  background: -webkit-linear-gradient(left, #cb60b3 0%, #c146a1 17%, #a80077 100%, #db36a4 100%);
+}
+
+h4, h5 {
+  font-family: "Bungee", cursive;
+  color: #faffb9;
+}
+
+#main-content {
+  margin-top: 80px;
+}
+
+@media (min-width: 602px) {
+  #twitch-bot {
+    text-align: left;
+  }
+}
