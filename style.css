@@ -11,13 +11,17 @@ h4, h5 {
   margin-top: 80px;
 }
 
+#all-button:hover, #online-button:hover, #offline-button:hover {
+  cursor: pointer;
+}
+
 /* Animate twitch bot, float up/down on y-axis */
 
 #twitch-bot img {
   position: relative;
-  -webkit-animation: mymove 4s infinite;
+  -webkit-animation: mymove 4.5s infinite;
   /* Safari 4.0 - 8.0 */
-  animation: mymove 4s infinite;
+  animation: mymove 4.5s infinite;
 }
 
 /* Safari 4.0 - 8.0 */
