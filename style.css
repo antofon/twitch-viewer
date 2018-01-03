@@ -11,6 +11,51 @@ h4, h5 {
   margin-top: 80px;
 }
 
+/* Animate twitch bot, float up/down on y-axis */
+
+#twitch-bot img {
+  position: relative;
+  -webkit-animation: mymove 4s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: mymove 4s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes mymove {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 50px;
+  }
+  75% {
+    top: 50px
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+/* Standard syntax */
+
+@keyframes mymove {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 50px;
+  }
+  75% {
+    top: 50px
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+/* end animation */
+
 @media (min-width: 602px) {
   #twitch-bot {
     text-align: left;
