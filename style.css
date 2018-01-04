@@ -1,3 +1,5 @@
+/* === HTML TAGS === */
+
 body {
   background: -webkit-linear-gradient(left, #cb60b3 0%, #c146a1 17%, #a80077 100%, #db36a4 100%);
 }
@@ -7,27 +9,27 @@ h4, h5 {
   color: #faffb9;
 }
 
+/* === IDs === */
+
 #main-content {
   margin-top: 80px;
 }
+
+/* === MEDIA QUERIES === */
+
+@media (min-width: 602px) {
+  #twitch-bot {
+    text-align: left;
+  }
+}
+
+/* === PSEUDOCLASSES AND PSEUDOELEMENTS === */
 
 #all-button:hover, #online-button:hover, #offline-button:hover {
   cursor: pointer;
 }
 
-/* #twitch-bot img {
-  position: absolute;
-  animation: floating 2s ease-in-out 0s infinite alternate;
-}
-
-@keyframes floating {
-  0% {
-    top: 200px;
-  }
-  100% {
-    top: 230px;
-  }
-} */
+/* === EXTRA ===  */
 
 /* Animate twitch bot, float up/down on y-axis */
 
@@ -73,9 +75,3 @@ h4, h5 {
 }
 
 /* end animation */
-
-@media (min-width: 602px) {
-  #twitch-bot {
-    text-align: left;
-  }
-}
