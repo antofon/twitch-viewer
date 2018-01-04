@@ -12,14 +12,63 @@ h4, h5 {
 /* === IDs === */
 
 #main-content {
-  margin-top: 80px;
+  margin-top: 60px;
+}
+
+#twitch-bot {
+  margin-bottom: 80px;
 }
 
 /* === MEDIA QUERIES === */
 
-@media (min-width: 602px) {
+@media (min-width: 600px) {
+  #twitch-bot img[width] {
+    width: 190px;
+  }
+  #twitch-bot img[height] {
+    height: 190px;
+  }
+}
+
+@media (min-width: 620px) {
   #twitch-bot {
     text-align: left;
+  }
+}
+
+@media (min-width: 730px) {
+  #twitch-bot img[width] {
+    width: 230px;
+  }
+  #twitch-bot img[height] {
+    height: 230px;
+  }
+}
+
+@media (min-width: 994px) {
+  #twitch-bot img[width] {
+    width: 220px;
+  }
+  #twitch-bot img[height] {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #twitch-bot img[width] {
+    width: 240px;
+  }
+  #twitch-bot img[height] {
+    height: 240px;
+  }
+}
+
+@media (min-width: 1350px) {
+  #twitch-bot img[width] {
+    width: 280px;
+  }
+  #twitch-bot img[height] {
+    height: 280px;
   }
 }
 
@@ -47,10 +96,10 @@ h4, h5 {
     top: 0px;
   }
   25% {
-    top: 50px;
+    top: 30px;
   }
   75% {
-    top: 50px
+    top: 30px
   }
   100% {
     top: 0px;
@@ -64,10 +113,10 @@ h4, h5 {
     top: 0px;
   }
   25% {
-    top: 50px;
+    top: 30px;
   }
   75% {
-    top: 50px
+    top: 30px
   }
   100% {
     top: 0px;
