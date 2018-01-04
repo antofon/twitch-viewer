@@ -22,6 +22,9 @@ h4, h5 {
 /* === MEDIA QUERIES === */
 
 @media (min-width: 600px) {
+  #twitch-bot {
+    position: fixed;
+  }
   #twitch-bot img[width] {
     width: 190px;
   }
@@ -74,9 +77,15 @@ h4, h5 {
 
 /* === PSEUDOCLASSES AND PSEUDOELEMENTS === */
 
-#all-button:hover, #online-button:hover, #offline-button:hover {
+/* #all-button:hover, #online-button:hover, #offline-button:hover {
   cursor: pointer;
-}
+} */
+
+/* #test5 {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 400px;
+} */
 
 /* === EXTRA ===  */
 
