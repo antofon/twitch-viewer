@@ -47,6 +47,7 @@ $(document).ready(function() {
 
   $onlineButton.click(function() {
     for (var key in streamers) {
+
       if (streamers.hasOwnProperty(key)) {
         //declare another function to prevent key from iterating to next value, since the function in 'click' is immediately called
         (function(key) {
@@ -56,6 +57,9 @@ $(document).ready(function() {
               console.log(key + " online");
               console.log(data);
               console.log(twitchURL + key);
+              //append img tag, and attributes with values to online content.
+              //BUG: Values continue to populate with each click, in this case, images
+              $('.online-content').append("<img src='" + data.stream.channel.logo + "' alt='random image' class='image-responsive circle'>");
             }
           });
         })(key);
