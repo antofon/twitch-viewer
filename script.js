@@ -5,24 +5,25 @@ $(document).ready(function() {
   var $onlineButton = $('#online-button');
   var $offlineButton = $('#offline-button');
 
-  var streamersURL = {
-    'esl_sc2_URL': {
+  var streamers = {
+    'esl_sc2': {
       'url': 'https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?',
       'status': false
     },
 
-    'freecodecamp_URL': {
+    'freecodecamp': {
       'url': 'https://wind-bow.gomix.me/twitch-api/streams/freecodecamp?callback=?',
       'status': false
     }
   };
 
   $allButton.click(function() {
-    for (var key in streamersURL) {
-      if (streamersURL.hasOwnProperty(key)) {
+    for (var key in streamers) {
+      if (streamers.hasOwnProperty(key)) {
         //declare another function to prevent key from iterating to next value, since the function in 'click' is immediately called
         (function(key) {
-          $.getJSON(streamersURL[key].url, function(data) {
+          $.getJSON(streamers[key].url, function(data) {
+            //if stream is offline aka 'null'
             if (data.stream === null) {
               console.log(key + " offline");
             } else {
