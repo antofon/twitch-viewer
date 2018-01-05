@@ -17,6 +17,17 @@ $(document).ready(function() {
     }
   };
 
+  /* Potential array implementation */
+  /*var esl_sc2_URL = 'https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?';
+ var freecodecamp_URL = 'https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?';
+
+ var urlArray = [esl_sc2_URL, freecodecamp_URL];
+
+ for(var i = 0; i < urlArray.length; i++) {
+
+ }
+   */
+
   //test print url in streamers object
   console.log(streamersURL.esl_sc2_URL.url);
 
