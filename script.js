@@ -17,6 +17,9 @@ $(document).ready(function() {
     }
   };
 
+  //test print url in streamers object
+  console.log(streamersURL.esl_sc2_URL.url);
+
   $allButton.click(function() {
     $.getJSON(esl_sc2, function(data) {
       if (data.stream === null) {
