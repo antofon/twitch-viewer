@@ -32,7 +32,7 @@ $(document).ready(function() {
   console.log(streamersURL.esl_sc2_URL.url);
 
   $allButton.click(function() {
-    $.getJSON(esl_sc2, function(data) {
+    $.getJSON(esl_sc2_URL, function(data) {
       if (data.stream === null) {
         console.log("ESL_SC2 offline");
       } else {
@@ -52,7 +52,7 @@ $(document).ready(function() {
   });
 
   $offlineButton.click(function() {
-    $.getJSON(esl_sc2, function(data) {
+    $.getJSON(esl_sc2_URL, function(data) {
       if (data.stream === null) {
         console.log("ESL_SC2 offline");
       } else {
