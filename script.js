@@ -5,6 +5,18 @@ $(document).ready(function() {
   var $onlineButton = $('#online-button');
   var $offlineButton = $('#offline-button');
 
+  var streamersURL = {
+    esl_sc2_URL: {
+      url: 'https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?',
+      status: false
+    },
+
+    freecodecamp_URL: {
+      url: 'https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?',
+      status: false
+    }
+  };
+
   $allButton.click(function() {
     $.getJSON(esl_sc2, function(data) {
       if (data.stream === null) {
