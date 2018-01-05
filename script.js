@@ -5,4 +5,6 @@ $(document).ready(function() {
   var $onlineButton = $('#online-button');
   var $offlineButton = $('#offline-button');
 
+  $allButton.click(function() {});
+
 });
