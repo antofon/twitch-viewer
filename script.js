@@ -5,7 +5,6 @@ $(document).ready(function() {
   var $onlineButton = $('#online-button');
   var $offlineButton = $('#offline-button');
   var twitchURL = "https://www.twitch.tv/";
-
   var streamers = {
     'freecodecamp': {
       'url': 'https://wind-bow.gomix.me/twitch-api/streams/freecodecamp?callback=?'
@@ -15,7 +14,7 @@ $(document).ready(function() {
       'url': 'https://wind-bow.gomix.me/twitch-api/streams/OgamingSC2?callback=?'
     },
 
-    'esl_sc2': {
+    'ESL_SC2': {
       'url': 'https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?'
     },
 
@@ -46,6 +45,7 @@ $(document).ready(function() {
   });
 
   $onlineButton.click(function() {
+    $('#test5').html("");
     for (var key in streamers) {
 
       if (streamers.hasOwnProperty(key)) {
@@ -54,12 +54,11 @@ $(document).ready(function() {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is online aka not 'null'
             if (data.stream !== null) {
-              console.log(key + " online");
-              console.log(data);
-              console.log(twitchURL + key);
-              //append img tag, and attributes with values to online content.
-              //BUG: Values continue to populate with each click, in this case, images
-              $('.online-content').append("<img src='" + data.stream.channel.logo + "' alt='random image' class='image-responsive circle'>");
+              // console.log(data.stream.channel.display_name + " online");
+              // console.log(data);
+              //append img tag, and attributes with values to each tab section.
+
+              $('#test5').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><h6 href='" + twitchURL + data.stream.channel.display_name + "'>" + data.stream.channel.display_name + "</h6>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
             }
           });
         })(key);
