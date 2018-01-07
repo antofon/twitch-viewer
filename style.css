@@ -86,21 +86,9 @@ h4, h5 {
 
 /* === PSEUDOCLASSES AND PSEUDOELEMENTS === */
 
-/* Materialize class */
-
-.collection-item:hover {
-  cursor: pointer;
-  background-color: #c146a1;
-  transition: .3s;
-  transition-timing-function: ease-in-out;
-  color: #faffb9;
-}
-
 a:hover {
   cursor: pointer;
-  transition: .3s;
-  transition-timing-function: ease-in-out;
-  color: #faffb9;
+  text-decoration: underline;
 }
 
 /* === EXTRA ===  */
