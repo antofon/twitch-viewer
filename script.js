@@ -45,7 +45,7 @@ $(document).ready(function() {
   });
 
   $onlineButton.click(function() {
-    $('#test5').html("");
+    $('#online').html("");
     for (var key in streamers) {
 
       if (streamers.hasOwnProperty(key)) {
@@ -58,7 +58,7 @@ $(document).ready(function() {
               // console.log(data);
               //append img tag, and attributes with values to each tab section.
 
-              $('#test5').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><h6 href='" + twitchURL + data.stream.channel.display_name + "'>" + data.stream.channel.display_name + "</h6>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
+              $('#online').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><h6 href='" + twitchURL + data.stream.channel.display_name + "'>" + data.stream.channel.display_name + "</h6>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
             }
           });
         })(key);
@@ -67,6 +67,7 @@ $(document).ready(function() {
   });
 
   $offlineButton.click(function() {
+    $('#offline').html("");
     for (var key in streamers) {
       if (streamers.hasOwnProperty(key)) {
         //declare another function to prevent key from iterating to next value, since the function in 'click' is immediately called
@@ -74,7 +75,8 @@ $(document).ready(function() {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is offline aka 'null'
             if (data.stream === null) {
-              console.log(key + " offline");
+              // console.log(key + " offline");
+              $('#offline').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><h6 href='" + twitchURL + data.stream.channel.display_name + "'>" + data.stream.channel.display_name + "</h6>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
             }
           });
         })(key);
