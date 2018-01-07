@@ -20,6 +20,22 @@ $(document).ready(function() {
 
     'RobotCaleb': {
       'url': 'https://wind-bow.gomix.me/twitch-api/streams/RobotCaleb?callback=?'
+    },
+
+    'cretetion': {
+      'url': 'https://wind-bow.gomix.me/twitch-api/streams/cretetion?callback=?'
+    },
+
+    'storbeck': {
+      'url': 'https://wind-bow.gomix.me/twitch-api/streams/storbeck?callback=?'
+    },
+
+    'habathcx': {
+      'url': 'https://wind-bow.gomix.me/twitch-api/streams/habathcx?callback=?'
+    },
+
+    'noobs2ninjas': {
+      'url': 'https://wind-bow.gomix.me/twitch-api/streams/noobs2ninjas?callback=?'
     }
   };
 
@@ -64,17 +80,13 @@ $(document).ready(function() {
   $onlineButton.click(function() {
     $('#online').html("");
     for (var key in streamers) {
-
       if (streamers.hasOwnProperty(key)) {
         //declare another function to prevent key from iterating to next value, since the function in 'click' is immediately called
         (function(key) {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is online aka not 'null'
             if (data.stream !== null) {
-              // console.log(data.stream.channel.display_name + " online");
-              // console.log(data);
               //append img tag, and attributes with values to each tab section.
-
               $('#online').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><a href='" + twitchURL + data.stream.channel.display_name + "' target='_blank'>" + "<br/>" + data.stream.channel.display_name + "</a>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
             }
           });
@@ -93,9 +105,6 @@ $(document).ready(function() {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is offline aka 'null'
             if (data.stream === null) {
-              console.log(data.stream);
-              console.log(key + " offline");
-
               $('#offline').append("<div class='row'><div class='col s12 center-align'>" + "<a href='" + twitchURL + key + "' target='_blank'>" + key + "</a><br/>" + "<p>Offline</p></div></div>");
             }
           });
