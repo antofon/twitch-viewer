@@ -1,3 +1,26 @@
+/* BUG: In Materialize tabs, for tabs-fixed width a horizontal scrollbar sometimes appears. Changed the property of their selector below */
+
+.tabs-fixed-width {
+  overflow-x: hidden;
+}
+
+/* BUG: In Materialize tabs, for .tabs .indicator the active indicator does not flush on the width of the tab. Changed the property of their selector below to transparent so that it doesn't show */
+
+.tabs .indicator {
+  background-color: transparent;
+}
+
+/* Materialize Class, white-text */
+
+a.white-text {
+  opacity: 0.5;
+  font-size: 1.1em !important;
+}
+
+a.white-text.active {
+  opacity: 1;
+}
+
 /* === HTML TAGS === */
 
 body {
