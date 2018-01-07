@@ -72,7 +72,7 @@ h4, h5 {
 
 /* === PSEUDOCLASSES AND PSEUDOELEMENTS === */
 
-a:hover {
+.custom-card-content a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
