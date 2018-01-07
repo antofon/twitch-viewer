@@ -21,10 +21,26 @@ $(document).ready(function() {
     'RobotCaleb': {
       'url': 'https://wind-bow.gomix.me/twitch-api/streams/RobotCaleb?callback=?'
     }
+  };
 
+  for (var key in streamers) {
+    if (streamers.hasOwnProperty(key)) {
+      //declare another function to prevent key from iterating to next value, since the function in 'click' is immediately called
+      (function(key) {
+        $.getJSON(streamers[key].url, function(data) {
+          //if stream is offline aka 'null'
+          if (data.stream === null) {
+            $('#all').append("<div class='row'><div class='col s12 center-align'>" + key + "</h6>" + "<p>Offline</p></div></div>");
+          } else {
+            $('#all').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><h6 href='" + twitchURL + data.stream.channel.display_name + "'>" + data.stream.channel.display_name + "</h6>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
+          }
+        });
+      })(key);
+    }
   };
 
   $allButton.click(function() {
+    $('#all').html("");
     for (var key in streamers) {
       if (streamers.hasOwnProperty(key)) {
         //declare another function to prevent key from iterating to next value, since the function in 'click' is immediately called
@@ -32,11 +48,9 @@ $(document).ready(function() {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is offline aka 'null'
             if (data.stream === null) {
-              console.log(key + " offline");
+              $('#all').append("<div class='row'><div class='col s12 center-align'>" + key + "</h6>" + "<p>Offline</p></div></div>");
             } else {
-              console.log(key + " online");
-              console.log(data);
-              console.log(twitchURL + key);
+              $('#all').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><h6 href='" + twitchURL + data.stream.channel.display_name + "'>" + data.stream.channel.display_name + "</h6>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
             }
           });
         })(key);
