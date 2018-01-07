@@ -75,8 +75,10 @@ $(document).ready(function() {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is offline aka 'null'
             if (data.stream === null) {
-              // console.log(key + " offline");
-              $('#offline').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><h6 href='" + twitchURL + data.stream.channel.display_name + "'>" + data.stream.channel.display_name + "</h6>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
+              console.log(data.stream);
+              console.log(key + " offline");
+
+              $('#offline').append("<div class='row'><div class='col s12 center-align'>" + key + "</h6>" + "<p>Offline</p></div></div>");
             }
           });
         })(key);
