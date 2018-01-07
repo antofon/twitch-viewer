@@ -1,7 +1,7 @@
 /* === HTML TAGS === */
 
 body {
-  background: -webkit-linear-gradient(left, #cb60b3 0%, #c146a1 17%, #a80077 100%, #db36a4 100%);
+  background: #6C44A4;
 }
 
 h4, h5 {
@@ -30,43 +30,7 @@ h4, h5 {
 
 /* === MEDIA QUERIES === */
 
-@media (min-width: 600px) {
-  #twitch-bot {
-    position: fixed;
-  }
-  #twitch-bot img[width] {
-    width: 190px;
-  }
-  #twitch-bot img[height] {
-    height: 190px;
-  }
-}
-
-@media (min-width: 620px) {
-  #twitch-bot {
-    text-align: left;
-  }
-}
-
-@media (min-width: 730px) {
-  #twitch-bot img[width] {
-    width: 230px;
-  }
-  #twitch-bot img[height] {
-    height: 230px;
-  }
-}
-
-@media (min-width: 994px) {
-  #twitch-bot img[width] {
-    width: 220px;
-  }
-  #twitch-bot img[height] {
-    height: 220px;
-  }
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 550px) {
   #twitch-bot img[width] {
     width: 240px;
   }
@@ -75,12 +39,34 @@ h4, h5 {
   }
 }
 
-@media (min-width: 1350px) {
+@media (min-width:601px) {
+  #twitch-bot {
+    position: fixed;
+  }
+}
+
+@media (min-width: 620px) {
+  /* Have bot scroll with user in a 2-col layout */
+  #twitch-bot {
+    text-align: left;
+  }
+}
+
+@media (min-width: 730px) {
   #twitch-bot img[width] {
-    width: 280px;
+    width: 270px;
   }
   #twitch-bot img[height] {
-    height: 280px;
+    height: 270px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #twitch-bot img[width] {
+    width: 320px;
+  }
+  #twitch-bot img[height] {
+    height: 320px;
   }
 }
 
@@ -90,50 +76,3 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-
-/* === EXTRA ===  */
-
-/* Animate twitch bot, float up/down on y-axis */
-
-#twitch-bot img {
-  position: relative;
-  -webkit-animation: mymove 4.5s infinite;
-  /* Safari 4.0 - 8.0 */
-  animation: mymove 4.5s infinite;
-}
-
-/* Safari 4.0 - 8.0 */
-
-@-webkit-keyframes mymove {
-  0% {
-    top: 0px;
-  }
-  25% {
-    top: 30px;
-  }
-  75% {
-    top: 30px
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-/* Standard syntax */
-
-@keyframes mymove {
-  0% {
-    top: 0px;
-  }
-  25% {
-    top: 30px;
-  }
-  75% {
-    top: 30px
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-/* end animation */
