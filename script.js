@@ -47,9 +47,9 @@ $(document).ready(function() {
         $.getJSON(streamers[key].url, function(data) {
           //if stream is offline aka 'null'
           if (data.stream === null) {
-            $('#all').append("<div class='row'><div class='col s12 center-align'>" + "<a href='" + twitchURL + key + "' target='_blank'>" + key + "</a><br/>" + "<p>Offline</p></div></div>");
+            $('#all').append("<div class='row collection'><div class='col s12 center-align collection-item'>" + "<a href='" + twitchURL + key + "' target='_blank'>" + key + "</a><br/>" + "<p>Offline</p></div></div>");
           } else {
-            $('#all').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><a href='" + twitchURL + data.stream.channel.display_name + "' target='_blank'>" + "<br/>" + data.stream.channel.display_name + "</a>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
+            $('#all').append("<div class='row collection'><div class='col s12 center-align collection-item'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><a href='" + twitchURL + data.stream.channel.display_name + "' target='_blank'>" + "<br/>" + data.stream.channel.display_name + "</a>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
           }
         });
       })(key);
@@ -66,9 +66,9 @@ $(document).ready(function() {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is offline aka 'null'
             if (data.stream === null) {
-              $('#all').append("<div class='row'><div class='col s12 center-align'>" + "<a href='" + twitchURL + key + "' target='_blank'>" + key + "</a><br/>" + "<p>Offline</p></div></div>");
+              $('#all').append("<div class='row collection'><div class='col s12 center-align collection-item'>" + "<a href='" + twitchURL + key + "' target='_blank'>" + key + "</a><br/>" + "<p>Offline</p></div></div>");
             } else {
-              $('#all').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><a href='" + twitchURL + data.stream.channel.display_name + "' target='_blank'>" + "<br/>" + data.stream.channel.display_name + "</a>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
+              $('#all').append("<div class='row collection'><div class='col s12 center-align collection-item'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><a href='" + twitchURL + data.stream.channel.display_name + "' target='_blank'>" + "<br/>" + data.stream.channel.display_name + "</a>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
             }
           });
         })(key);
@@ -87,7 +87,7 @@ $(document).ready(function() {
             //if stream is online aka not 'null'
             if (data.stream !== null) {
               //append img tag, and attributes with values to each tab section.
-              $('#online').append("<div class='row'><div class='col s12 center-align'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><a href='" + twitchURL + data.stream.channel.display_name + "' target='_blank'>" + "<br/>" + data.stream.channel.display_name + "</a>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
+              $('#online').append("<div class='row collection'><div class='col s12 center-align collection-item'><img src='" + data.stream.channel.logo + "' alt='random image' width='100' height='100' class='image-responsive circle'><a href='" + twitchURL + data.stream.channel.display_name + "' target='_blank'>" + "<br/>" + data.stream.channel.display_name + "</a>" + "<p>" + data.stream.channel.game + ": " + data.stream.channel.status + "</p> </div></div>");
             }
           });
         })(key);
@@ -105,7 +105,7 @@ $(document).ready(function() {
           $.getJSON(streamers[key].url, function(data) {
             //if stream is offline aka 'null'
             if (data.stream === null) {
-              $('#offline').append("<div class='row'><div class='col s12 center-align'>" + "<a href='" + twitchURL + key + "' target='_blank'>" + key + "</a><br/>" + "<p>Offline</p></div></div>");
+              $('#offline').append("<div class='row collection'><div class='col s12 center-align collection-item'>" + "<a href='" + twitchURL + key + "' target='_blank'>" + key + "</a><br/>" + "<p>Offline</p></div></div>");
             }
           });
         })(key);
