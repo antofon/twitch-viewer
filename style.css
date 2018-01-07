@@ -9,6 +9,15 @@ h4, h5 {
   color: #faffb9;
 }
 
+/* === CLASSES === */
+
+/* Materialize class */
+
+.collection-item {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
 /* === IDs === */
 
 #main-content {
@@ -77,15 +86,22 @@ h4, h5 {
 
 /* === PSEUDOCLASSES AND PSEUDOELEMENTS === */
 
-/* #all-button:hover, #online-button:hover, #offline-button:hover {
-  cursor: pointer;
-} */
+/* Materialize class */
 
-/* #test5 {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 400px;
-} */
+.collection-item:hover {
+  cursor: pointer;
+  background-color: #c146a1;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  color: #faffb9;
+}
+
+a:hover {
+  cursor: pointer;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  color: #faffb9;
+}
 
 /* === EXTRA ===  */
 
